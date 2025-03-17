@@ -24,6 +24,20 @@ function gitma() {
   git add . && gitm "$1"
 }
 
+function dev() {
+  if git show-ref --quiet refs/heads/main; then
+    git checkout main
+  elif git show-ref --quiet refs/heads/master; then
+    git checkout master
+  elif git show-ref --quiet refs/heads/development; then
+    git checkout development
+  else
+    echo "Neither 'main', 'master', nor 'development' branch exists."
+    return 1
+  fi
+}
+
+
 alias gb="git branch --show-current 2>/dev/null | pbcopy"
 
 # overloads
