@@ -1,0 +1,17 @@
+*
+
+!.zshrc
+!.gitconfig
+!.gitignore
+!.brew_install_deps.sh
+
+# funky method so we can ignore everything in .config apart from selected ones
+!.config/
+.config/*
+
+!.config/nvim/
+!.config/nvim/**
+
+!.config/ohmyposh/
+!.config/ohmyposh/**
+

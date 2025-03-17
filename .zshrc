@@ -12,15 +12,27 @@ alias gs="git status"
 
 alias gita="git add ."
 
-function gitma() {
+function gitm() {
   if [ -z "$1" ]; then
     echo "Please provide a commit message."
     return 1
   fi
-  git add . && git commit -m "$1"
+  git commit -m "$1"
 }
+
+function gitma() {
+  git add . && gitm "$1"
+}
+
+alias gb="git branch --show-current 2>/dev/null | pbcopy"
 
 # overloads
 alias vim="nvim"
+alias cat="bat"
+
+
+# env variables
+export EDITOR=nvim
+export VISUAL=nvim
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/cfg.json)"
