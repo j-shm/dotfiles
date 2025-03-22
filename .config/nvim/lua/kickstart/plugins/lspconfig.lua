@@ -183,10 +183,11 @@ return {
       --  You can press `g?` for help in this menu.
       require('mason').setup()
 
-      -- WARNING: this is being strange for some reason not sure why! Therefore its outside the expected area
-      require('lspconfig').bashls.setup {
-        filetypes = { 'sh', 'zsh' },
-      }
+      --
+      -- TODO: this seems to be broken on home pc commenting out for now
+      -- require('lspconfig').bashls.setup {
+      --  filetypes = { 'sh', 'zsh' },
+      -- }
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.

@@ -2,6 +2,9 @@
 alias zcfg="vim ~/.zshrc"
 alias vcfg="cd ~/.config/nvim && vim ."
 
+# random aliases
+alias cl="clear"
+
 # git aliases
 alias gauth="ssh -T git@github.com"
 alias gp="git push"
