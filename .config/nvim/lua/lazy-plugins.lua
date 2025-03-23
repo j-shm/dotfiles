@@ -48,6 +48,7 @@ require('lazy').setup({
   --
   require 'custom/plugins/tmux',
   require 'custom/plugins/fzf',
+  require 'custom/plugins/waka',
 
   -- require 'custom/plugins/markdown-viewer',
 
